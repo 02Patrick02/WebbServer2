@@ -1,3 +1,14 @@
+<?php
+	require "../include/connect.php";
+	
+	$sql = "SELECT * FROM products";	
+	$res=$dbh->prepare($sql);
+	$res->execute();
+	$result=$res->get_result();
+	
+	$dbh->close();
+?>
+
 <!DOCTYPE html>
 <html lang="sv">
   <head>
@@ -11,15 +22,7 @@
 	<?php 
 		require "masthead.php";
 		require "meny.php";
-		require "../include/connect.php";
-		
-		
-		$sql = "SELECT * FROM products";
-		
-		$res=$dbh->prepare($sql);
-		$res->execute();
-		$result=$res->get_result();
-		$dbh->close();
+	
 	?>
 		
 		
@@ -48,6 +51,7 @@
 						echo"<td><td>";
 						echo $row['price'];
 					}
+					?>
 						<!--<tr>
 							<td>Äpple</td>
 							<td>Grönt surt</td>
