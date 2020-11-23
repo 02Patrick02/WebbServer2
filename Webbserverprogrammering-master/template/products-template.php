@@ -5,8 +5,6 @@
 	$res=$dbh->prepare($sql);
 	$res->execute();
 	$result=$res->get_result();
-	
-	$dbh->close();
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +20,6 @@
 	<?php 
 		require "masthead.php";
 		require "meny.php";
-	
 	?>
 		
 		

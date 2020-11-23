@@ -7,9 +7,6 @@
 	</head>
   <body id="sida3">
     <div id="wrapper">
-			<header><!--Sidhuvud-->
-            <h1>Min onlinebutik - Produkter</h1>
-      </header>
       
 	<?php 
 		require "masthead.php";

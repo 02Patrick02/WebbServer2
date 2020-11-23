@@ -1,8 +1,8 @@
 <nav><!--Navigationsmeny-->
 			<ul>
-				<li><a href="index.html">Start</a></li>
-				<li><a href="products.html">Produkter</a></li>
-				<li><a href="sida3.html">Varusida 2</a></li>
-				<li><a href="login.html">Logga in</a></li>
+				<li><a href="index.php">Start</a></li>
+				<li><a href="products.php">Produkter</a></li>
+				<li><a href="sida3.php">Varusida 2</a></li>
+				<li><a href="login.php">Logga in</a></li>
 			</ul>
 		</nav>

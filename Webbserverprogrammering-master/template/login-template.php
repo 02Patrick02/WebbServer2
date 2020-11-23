@@ -1,3 +1,14 @@
+<?php
+$str="";
+if(isset($_GET['status'])){
+	if($_GET['status']==1){
+		$str="Felaktig användare";
+	}
+	elseif($_GET['status']==2){
+		$str="Felaktig lösenord";
+	}
+}	
+?>
 <!DOCTYPE html>
 
 <html lang="sv">
@@ -10,13 +21,14 @@
   <body id="login">
     <div id="wrapper">
     <?php 
-		require "masthead.php";
-		require "meny.php";
-	?>
+		  require "masthead.php";
+		  require "meny.php";
+	  ?>
 		
 			<main> <!--Huvudinnehåll-->
 				<section>
-					 <form action="login2.php" method="post">
+          <p><?php echo $str; ?></p>
+					<form action="login2.php" method="post">
             <p><label for="user">Användarnamn:</label>
             <input type="text" id="user" name="username"></p>
             <p><label for="pwd">Lösenord:</label>
