@@ -29,23 +29,28 @@
 				<table>	
 					<thead>
 						<tr>
-							<th>Namn</th>
-							<th>Beskrivning</th>
-							<th>Bild</th>
-							<th>Pris</th>
+							<th>Name</th>
 							<th></th>
+							<th>Description</th>
+							<th></th>
+							<th>Picture</th>
+							<th></th>
+							<th>Price</th>
+							
+					
 						</tr>
 					</thead>
 					<tbody>
 					<?php
-					foreach($row as $result-> fetch_assoc()){
+					while($row = $result-> fetch_assoc()){
 						echo"<tr><td>"; 
 						echo $row['name'];
-						echo"<td><td>";
+						echo "<td><td>";
 						echo $row['description'];
-						echo"<td><td>";	
+						echo "<td><td>";	
+						echo "<img src";
 						echo $row['picture'];
-						echo"<td><td>";
+						echo "</td><td>";
 						echo $row['price'];
 					}
 					?>

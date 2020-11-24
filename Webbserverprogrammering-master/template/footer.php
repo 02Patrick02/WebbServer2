@@ -1,3 +1,3 @@
-		<footer>
-				 Webbplats för kursen Webbserverprogrammering 1
-		</footer>
+<footer>
+	 Webbplats för kursen Webbserverprogrammering 1
+</footer>

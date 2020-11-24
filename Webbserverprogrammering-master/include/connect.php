@@ -1,5 +1,5 @@
 <?php
-	$dbh = new mysqli("localhost", "username", "patrick", "webbshop3");
+	$dbh = new mysqli("localhost", "username", "password", "webbshop");
 	
 	if(!$dbh) {
 		echo "Ingen kontakt med databasen";
