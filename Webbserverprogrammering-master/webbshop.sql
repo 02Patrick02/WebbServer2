@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 29 sep 2020 kl 14:32
+-- Tid vid skapande: 04 dec 2020 kl 11:11
 -- Serverversion: 10.4.6-MariaDB
 -- PHP-version: 7.3.8
 
@@ -44,7 +44,9 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customerID`, `username`, `firstname`, `lastname`, `address`, `zip`, `city`, `phone`) VALUES
-(1, 'kalle', 'kalle', 'stenman', 'stenvägen', 25324, 'stenstaden', '2143234323');
+(1, 'kalle', 'kalle', 'stenman', 'stenvägen', 25324, 'stenstaden', '2143234323'),
+(2, 'Fisken', 'Fisken', 'Fiskensson', 'Vattenvägen ', 45325, 'Fiskestaden', '1245464343'),
+(3, 'Björn', 'Björn', 'Björnsson', 'Skogsvägen', 53409, 'Björnstaden', '129432300');
 
 -- --------------------------------------------------------
 
@@ -98,7 +100,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`username`, `email`, `password`, `status`) VALUES
-('kalle', 'kalle@example', 'kalle123', 0);
+('Björn', 'Björn@example.se', 'björnen123', 1),
+('Fisken', 'Fisk@example.se', 'fisken123', 3),
+('kalle', 'Kalle@example.se', 'kalle123', 0);
 
 --
 -- Index för dumpade tabeller
@@ -142,7 +146,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT för tabell `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customerID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `customerID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT för tabell `orders`
