@@ -36,8 +36,6 @@
 							<th>Picture</th>
 							<th></th>
 							<th>Price</th>
-							
-					
 						</tr>
 					</thead>
 					<tbody>
@@ -50,6 +48,7 @@
 						echo "<td><td>";	
 						echo "<img src";
 						echo $row['picture'];
+						echo "</td><td>";
 						echo "</td><td>";
 						echo $row['price'];
 					}

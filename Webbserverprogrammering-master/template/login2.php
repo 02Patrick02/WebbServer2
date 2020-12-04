@@ -28,5 +28,4 @@ else{
 		header("Location:login.php?status=2");
 	}
 }
-
 ?>
