@@ -30,8 +30,8 @@
 					<thead>
 						<tr>
 							<th>Namn</th>
-							<th></th>
 							<th>Efternamn</th>
+							<th>Adress</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -40,10 +40,12 @@
 					<?php
 					while($row=$result->fetch_assoc()){
 						echo "<tr><td>";
-						echo $row['username'];
+						echo $row['firstname'];
 						echo "</td><td>";
 						echo $row['lastname'];
-						echo "<td></tr>";
+						echo "<td></td>";
+						echo $row['adress'];
+						echo "</td><td>";
 					}
 					?>
 					

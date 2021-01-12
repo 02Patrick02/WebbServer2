@@ -85,10 +85,9 @@
 				</table>
 
 			</section>
-	
-		<?php 
-			require "footer.php";
-		?>
-	</div>
+		</div>
+	<?php 
+		require "footer.php";
+	?>
   </body>
 </html>
