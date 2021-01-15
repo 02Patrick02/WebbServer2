@@ -1,10 +1,11 @@
 <?php
 
-if(empty($_POST['username'])||empty($POST['password'])){
+if(empty($_POST['username'])||empty($_POST['password'])){
     header("Location:login.php");
+  
 }
 
-require "../includes/connect.php";
+require "../include/connect.php";
 
 $username = filter_input(INPUT_POST,'username',FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
 $password = filter_input(INPUT_POST,'password',FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW);
@@ -19,6 +20,7 @@ $row=$result->fetch_assoc();
 
 if(!$row){
     header("Location:../html/login.php?status=1");
+  
 }
 else{
     if($password === $row['password']){
@@ -26,9 +28,11 @@ else{
         $_SESSION['username']=$username;
         $_SESSION['status']=$row['status'];
         header("Location:../html/admin.php");
+     
     }
     else{
-        header("Location:../html/login.php?status=2");
+       header("Location:../html/login.php?status=2");
+     echo "felaktigt lösenord";
     }
 }
 
