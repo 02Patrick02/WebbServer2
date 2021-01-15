@@ -1,8 +1,9 @@
 <?php
 	require "../include/connect.php";
-	
-	$sql = "SELECT * FROM users WHERE username = ?";	
+	$username=$_SESSION['username'];
+	$sql = "SELECT * FROM customers WHERE username = ?";	
 	$res=$dbh->prepare($sql);
+	$res->bind_param("s", $username);
 	$res->execute();
 	$result=$res->get_result();
 ?>
@@ -32,7 +33,7 @@
 							<th>Namn</th>
 							<th>Efternamn</th>
 							<th>Adress</th>
-							<th></th>
+							
 						</tr>
 					</thead>
 					<tbody>
@@ -43,12 +44,13 @@
 						echo $row['firstname'];
 						echo "</td><td>";
 						echo $row['lastname'];
-						echo "<td></td>";
-						echo $row['adress'];
 						echo "</td><td>";
+						echo $row['address'];
+						echo "</td></tr>";
 					}
 					?>
-					
+					</tbody>
+				</table>
 
 			</section>
 		</main>

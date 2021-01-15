@@ -46,7 +46,7 @@
 						echo "<td><td>";
 						echo $row['description'];
 						echo "<td><td>";	
-						echo "<img src";
+						echo "<img src=";
 						echo $row['picture'];
 						echo "</td><td>";
 						echo "</td><td>";

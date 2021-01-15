@@ -1,7 +1,8 @@
 <?php
 
 if(empty($_POST['username'])||empty($POST['password'])){
-    header("Location:login.php");
+   // header("Location:login.php");
+   echo "tomt fält";
 }
 
 require "../includes/connect.php";
@@ -18,17 +19,20 @@ $result=$res->get_result();
 $row=$result->fetch_assoc();
 
 if(!$row){
-    header("Location:../html/login.php?status=1");
+  //  header("Location:../html/login.php?status=1");
+  echo "användare saknas";
 }
 else{
     if($password === $row['password']){
         session_start();
         $_SESSION['username']=$username;
         $_SESSION['status']=$row['status'];
-        header("Location:../html/admin.php");
+       // header("Location:../html/admin.php");
+       echo "användare inloggad";
     }
     else{
-        header("Location:../html/login.php?status=2");
+      //  header("Location:../html/login.php?status=2");
+      echo "feelaktigt lösenord";
     }
 }
 
