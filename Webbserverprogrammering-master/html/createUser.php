@@ -1,5 +1,5 @@
-<?php
-require "login.php";
-
-INSERT INTO tabell(kolumn1, kolumn2, kolumn3) VALUE (värde1, värde2, värde3)
+<?php 
+    $h1span = "CreateUser";
+    header("Content-type:text/html; charset = utf-8");
+    require "../template/admin-template.php";
 ?>
