@@ -46,6 +46,5 @@ if(isset($_GET['status'])){
 			require "footer.php";
 		?>
    
-
 	</body>
 </html>

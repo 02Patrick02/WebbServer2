@@ -1,6 +1,8 @@
 <?php
 	require "../include/connect.php";
+
 	$username=$_SESSION['username'];
+	
 	$sql = "SELECT * FROM customers WHERE username = ?";	
 	$res=$dbh->prepare($sql);
 	$res->bind_param("s", $username);
