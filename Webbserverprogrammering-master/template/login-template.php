@@ -37,7 +37,7 @@ if(isset($_GET['status'])){
             <input type="submit" value="Logga in">
             </p>
           </form>
-          <p class="create"><a href="#">Skapa användare</a></p>
+          <p class="create"><a href="createUser.php">Skapa användare</a></p>
 				</section>
 			</main>
 
