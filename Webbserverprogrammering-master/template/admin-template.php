@@ -59,6 +59,8 @@
 		<?php 
 			require "footer.php";
 		?>
+		<p id="uniktId"></p>
+		<a href="logout.php#uniktId">logga ut</a>
 	</div>
   </body>
 </html>

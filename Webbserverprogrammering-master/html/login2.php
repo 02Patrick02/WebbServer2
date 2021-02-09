@@ -36,6 +36,19 @@ else{
     }
 }
 
+if else{
+	if($row["password"]==$password){
+		session_start();
+		$_SESSION['username']=$username;
+		header("Location:admin.php");
+     
+	}
+	else{
+		if(password_verify($password,$row['password']))
+	echo "Användaren är inloggad";
+	}
+}
+
 echo $username;
 echo "<br>";
 
