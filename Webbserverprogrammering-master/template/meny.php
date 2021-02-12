@@ -39,7 +39,7 @@ NAV;
   <nav id="admin">
     <ul>
       <li><a href="index.php">Start</a></li>
-      <li><a href="createProducts.php">Lägga till produkter</a></li>
+      <li><a href="createProduct.php">Lägga till produkter</a></li>
       <li><a href="sida3.php">ändra produkter </a></li>
       <li><a href="#">ta bort produkter </a></li>
       <li><a href="admin.php">Admin in</a></li>

@@ -1,6 +1,6 @@
 <?php
-$target_dir = "bilder/";
-$target_file = $target_dir . basename($_FILES["picture"]["name"]);
+$target_dir = "./bilder";
+$target_file = $target_dir . basename($_FILES["../bilder"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 $check = getimages($_FILES["picture"]["tmp_name"]);
@@ -21,4 +21,23 @@ $sql = "INSRET INTO products(name, description, price, picture) VALUE(?,?,?,?)";
 $res=$dbh->prepare($sql);
 $res->bind_param("ssis",$namn, $descr, $pris, $target_file);
 }
+
+else
+		{
+			$str.=<<<FORM
+			<form action="createProduct.php" method="post">
+       	    	<p><label for="name">name:</label>
+            	<input type="text" id="name" name="name"></p>
+				<p><label for="description">description:</label>
+				<input type="text" id="description" name="description"></p>
+				<p><label for="price">price:</label>
+				<input type="text" id="price" name="price"></p>
+				<p><label for="picture">picture:</label>
+				<input type="text" id="picture" name="picture"></p>
+            	<p>
+            	<input type="submit" value="Skapa användare">
+            	</p>
+          	</form>
+FORM;
+		}
 ?>

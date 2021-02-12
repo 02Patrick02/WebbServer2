@@ -23,12 +23,12 @@ if(!$row){
   
 }
 else{
-    if($password === $row['password']){
+   if(password_verify($password,$row['password'])){
         session_start();
         $_SESSION['username']=$username;
         $_SESSION['status']=$row['status'];
         header("Location:../html/admin.php");
-     
+     echo "Användaren är inloggad";
     }
     else{
        header("Location:../html/login.php?status=2");
@@ -36,18 +36,6 @@ else{
     }
 }
 
-if else{
-	if($row["password"]==$password){
-		session_start();
-		$_SESSION['username']=$username;
-		header("Location:admin.php");
-     
-	}
-	else{
-		if(password_verify($password,$row['password']))
-	echo "Användaren är inloggad";
-	}
-}
 
 echo $username;
 echo "<br>";
