@@ -3,17 +3,17 @@ $target_dir = "./bilder";
 $target_file = $target_dir . basename($_FILES["../bilder"]["name"]);
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-$check = getimages($_FILES["picture"]["tmp_name"]);
+$check = getimagesize($_FILES["picture"]["tmp_name"]);
 if($check === false) {
 header("location:createProduct.php?errmsg=1");
 }
 
-if(file_exists($target_file)) {
+if(!file_exists($target_file)) {
 header("location:createProduct.php?errmsg=2");
 }
 
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
-header("location.createProduct.php?errmsg=1");
+header("location.createProduct.php?errmsg=3");
 }
 
 if(move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
