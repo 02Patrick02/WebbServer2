@@ -27,7 +27,7 @@ else
       <li><a href="index.php">Start</a></li>
       <li><a href="products.php">Produkter</a></li>
       <li><a href="sida3.php">Varusida 2</a></li>
-      <li><a href="admin.php">Admin in</a></li>
+      <li><a href="admin.php">Admin</a></li>
     </ul>
   </nav>
 NAV;
@@ -39,10 +39,9 @@ NAV;
   <nav id="admin">
     <ul>
       <li><a href="index.php">Start</a></li>
+      <li><a href="products.php">Produkter</a></li>
       <li><a href="createProduct.php">Lägga till produkter</a></li>
-      <li><a href="sida3.php">ändra produkter </a></li>
-      <li><a href="#">ta bort produkter </a></li>
-      <li><a href="admin.php">Admin in</a></li>
+      <li><a href="admin.php">Admin</a></li>
     </ul>
   </nav>
 NAV;
